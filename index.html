@@ -21,15 +21,15 @@
 
       <div class="info">
         <div>
-          <h2>1.9 s</h2>
-          <p>60 mph</p>
+          <h2 class="acc">5.9 s</h2>
+          <p class="acc-speed">60 mph</p>
         </div>
         <div>
-          <h2>200 mph</h2>
+          <h2 class="speed">200 mph</h2>
           <p>Top Speed</p>
         </div>
         <div>
-          <h2>396 mi</h2>
+          <h2 class="range">405 mi</h2>
           <p>Max Range</p>
         </div>
         <div class="line"></div>
@@ -40,28 +40,48 @@
     </div>
 
     <script>
-      var header = document.getElementById("header");
-      var models = document.getElementById("model-s");
-      var model3 = document.getElementById("model-3");
-      var modelx = document.getElementById("model-x");
-      var modely = document.getElementById("model-y");
-      var model = document.getElementById("model");
+      const header = document.getElementById("header");
+      const modelS = document.getElementById("model-s");
+      const model3 = document.getElementById("model-3");
+      const modelX = document.getElementById("model-x");
+      const modelY = document.getElementById("model-y");
+      const model = document.getElementById("model");
+      const acc = document.querySelector(".acc");
+      const accSpeed = document.querySelector(".acc-speed");
+      const speed = document.querySelector(".speed");
+      const range = document.querySelector(".range");
 
-      models.onclick = function () {
+      modelS.onclick = function () {
         header.style.backgroundImage = "url(images/image-1.png)";
-        model.innerHTML = "Model S";
+        model.innerText = "Model S";
+        acc.innerText = "5.9 s";
+        accSpeed.innerText = "60 mph";
+        speed.innerText = "200 mph";
+        range.innerText = "405 mi";
       };
       model3.onclick = function () {
         header.style.backgroundImage = "url(images/image-2.png)";
-        model.innerHTML = "Model 3";
+        model.innerText = "Model 3";
+        acc.innerText = "5.3 s";
+        accSpeed.innerText = "80 mph";
+        speed.innerText = "145 mph";
+        range.innerText = "341 mi";
       };
-      modelx.onclick = function () {
+      modelX.onclick = function () {
         header.style.backgroundImage = "url(images/image-3.png)";
-        model.innerHTML = "Model X";
+        model.innerText = "Model X";
+        acc.innerText = "4.4 s";
+        accSpeed.innerText = "60 mph";
+        speed.innerText = "155 mph";
+        range.innerText = "335 mi";
       };
-      modely.onclick = function () {
+      modelY.onclick = function () {
         header.style.backgroundImage = "url(images/image-4.png)";
-        model.innerHTML = "Model Y";
+        model.innerText = "Model Y";
+        acc.innerText = "4.9 s";
+        accSpeed.innerText = "100 mph";
+        speed.innerText = "135 mph";
+        range.innerText = "310 mi";
       };
     </script>
   </body>
